@@ -1,0 +1,30 @@
+#Name:Siam Hossain
+#Email:siam.hossain83@myhunter.cuny.edu
+import matplotlib.pyplot as plt
+import numpy as np
+firstImage = input("Enter first image file name:")
+imgOne = plt.imread(firstImage)
+
+secondImage = input("Enter second image file name:")
+imgSecond = plt.imread(secondImage)
+
+t = float(input("Enter threshold of white pixels:")
+            
+countSnowFirstImg = 0            
+countSnowSecondImg = 0
+
+for i in range(imgOne.shape[0]):
+     for j in range(imgOne.shape[1]):
+          if (imgOne[i,j,0] > t) and (imgOne[i,j,1] > t) and (imgOne[i,j,2] > t):
+               countSnowFirstImg = countSnowFirstImg + 1
+
+for i in range(imgSecond.shape[0]):
+     for j in range(imgSecond.shape[1]):
+          if (imgSecond[i,j,0] > t) and (imgSecond[i,j,1] > t) and (imgSecond[i,j,2] > t):
+               countSnow2 = countSnow2 + 1
+
+difference = countSnowFirstImg - countSnowSecondImg
+
+print("Snow count of first image:", countSnow1)
+print("Snow count of second image:", countSnow2)
+print("Difference between first and second image:", difference)
